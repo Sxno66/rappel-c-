@@ -26,11 +26,13 @@ public:
     mission(const mission& entre);
     mission& operator = (const mission& entre);
 
-    mission(std::string nbPersonne, std::string nbHeure; std::string descriptifMission);
+    mission(std::string nbPersonne, std::string nbHeure; std::string Description);
     std::string getnbPersonne();
     void setnbPersonne(std::string nombrePersonne);
     std::string getnbHeure();
     void setnbHeure(std::string nombreHeure);
+    std::string getDescription();
+    void setDescription(std::string Description);
 
 };
 
