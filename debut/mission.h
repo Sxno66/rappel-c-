@@ -13,7 +13,7 @@ private:
     
     std::string nbHeure;
 
-
+    std::string descriptifMission;
 
 protected:
 
@@ -21,16 +21,16 @@ protected:
 
 public:
     /*Classe sous forme canonique*/
-    Entreprise();
-    ~Entreprise();
-    Entreprise(const Entreprise& entre);
-    Entreprise& operator = (const Entreprise& entre);
+    mission();
+    ~mission();
+    mission(const mission& entre);
+    mission& operator = (const mission& entre);
 
-    Entreprise(std::string nom, std::string ville);
-    std::string getNomEntreprise();
-    void setEntreprise(std::string nouveauNom);
-    std::string getVilleEntreprise();
-    void setVilleEntreprise(std::string nouvelleVille);
+    mission(std::string nbPersonne, std::string nbHeure; std::string descriptifMission);
+    std::string getnbPersonne();
+    void setnbPersonne(std::string nombrePersonne);
+    std::string getnbHeure();
+    void setnbHeure(std::string nombreHeure);
 
 };
 
