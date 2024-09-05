@@ -23,8 +23,8 @@ public:
     /*Classe sous forme canonique*/
     mission();
     ~mission();
-    mission(const mission& entre);
-    mission& operator = (const mission& entre);
+    mission(const mission& miss);
+    mission& operator = (const mission& miss);
 
     mission(std::string nbPersonne, std::string nbHeure; std::string Description);
     std::string getnbPersonne();
