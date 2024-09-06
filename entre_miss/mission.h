@@ -3,37 +3,29 @@
 #include <iostream>
 #include <string>
 
-
-class mission
+class Mission
 {
-
 private:
-    
     std::string nbPersonne;
-    
     std::string nbHeure;
-
     std::string descriptifMission;
 
 protected:
 
-
-
 public:
     /*Classe sous forme canonique*/
-    mission();
-    ~mission();
-    mission(const mission& miss);
-    mission& operator = (const mission& miss);
+    Mission();
+    ~Mission();
+    Mission(const Mission& miss);
+    Mission& operator=(const Mission& miss);
 
-    mission(std::string nbPersonne, std::string nbHeure; std::string Description);
+    Mission(std::string nbPersonne, std::string nbHeure, std::string Description);
     std::string getnbPersonne();
     void setnbPersonne(std::string nombrePersonne);
     std::string getnbHeure();
     void setnbHeure(std::string nombreHeure);
     std::string getDescription();
     void setDescription(std::string Description);
-
 };
 
 #endif

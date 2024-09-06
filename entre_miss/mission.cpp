@@ -1,76 +1,60 @@
 #include "mission.h"
 
-
-
 using namespace std;
 
-
-
-mission::mission() {
-
-    this->nombrePersonnes = "inconnus";
-    this->nombreHeures = "inconnues";
-    this->description = "inconnue";
-
+Mission::Mission() {
+    this->nbPersonne = "inconnus";
+    this->nbHeure = "inconnues";
+    this->descriptifMission = "inconnue";
 }
 
-
-mission::mission(std::string personnes, std::string heure, std::string description) {
-    this->nombrePersonnes = personnes;
-
-    this->nombreHeures = heure;
-
-    this->description = description;
+Mission::Mission(std::string personnes, std::string heure, std::string description) {
+    this->nbPersonne = personnes;
+    this->nbHeure = heure;
+    this->descriptifMission = description;
 }
 
-
-
-mission::~mission() {
-
-    cout << "Destruction de la mission " << this->nombrePersonnes << " " << this->nombreHeures << " " << this->description << endl;
-
+Mission::~Mission() {
+    cout << "Destruction de la mission " << this->nbPersonne << " " << this->nbHeure << " " << this->descriptifMission << endl;
 }
 
-
-mission::mission(const mission& miss)
-{
-    cout << "Copie de Capitaine" << endl;
-    this->nombrePersonnes = miss.nombrePersonnes;
-    this->nombreHeures = miss.nombreHeures;
-    this->description = miss.description;
-
+Mission::Mission(const Mission& miss) {
+    cout << "Copie de la mission" << endl;
+    this->nbPersonne = miss.nbPersonne;
+    this->nbHeure = miss.nbHeure;
+    this->descriptifMission = miss.descriptifMission;
 }
 
-
-mission& mission::operator = (const mission& miss)
-{
-    cout << "Affectation de l'entreprise" << std::endl;
-    if (this != &miss)  
-    {
-        this->nombrePersonnes = miss.nombrePersonnes;
-        this->nombreHeures = miss.nombreHeures;
-        this->description = miss.description;
+Mission& Mission::operator=(const Mission& miss) {
+    cout << "Affectation de la mission" << std::endl;
+    if (this != &miss) {
+        this->nbPersonne = miss.nbPersonne;
+        this->nbHeure = miss.nbHeure;
+        this->descriptifMission = miss.descriptifMission;
     }
     return *this;
 }
 
-
-std::string mission::getNomEntreprise()
-{
-    return this->nomEntreprise;
+std::string Mission::getnbPersonne() {
+    return this->nbPersonne;
 }
 
-
-void Entreprise::setEntreprise(std::string nouveauNom) {
-    this->nomEntreprise = nouveauNom;
+void Mission::setnbPersonne(std::string nombrePersonne) {
+    this->nbPersonne = nombrePersonne;
 }
 
-std::string Entreprise::getVilleEntreprise() {
-    return this->villeEntreprise;
+std::string Mission::getnbHeure() {
+    return this->nbHeure;
 }
 
+void Mission::setnbHeure(std::string nombreHeure) {
+    this->nbHeure = nombreHeure;
+}
 
+std::string Mission::getDescription() {
+    return this->descriptifMission;
+}
 
-void  Entreprise::setVilleEntreprise(std::string nouvelleVille) {
-    this->villeEntreprise = nouvelleVille;
+void Mission::setDescription(std::string description) {
+    this->descriptifMission = description;
 }
